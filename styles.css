@@ -1,0 +1,503 @@
+/* paleta de cores */
+:root {
+    --black: #0b0b0f;
+    --panel: #16161d;
+    --line: #2a2a33;
+    --red: #e10600;
+    --white: #f5f5f7;
+    --muted: #9a9aa6;
+    --yellow: #ffcc00;
+
+        /* equipes */
+    --ferrari: #e10b2f;
+    --mclaren: #ff8000;
+    --mercedes: #27f4d2;
+    --audi: #b6babd;
+
+    --font: 'Titillium Web', 'Segoe UI', sans-serif;
+
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--black);
+  color: var(--white);
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* botoes */
+.btn-primary,
+.btn-outline {
+    display: inline-block;
+    font-family: var(--font);
+    font-size: .95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 17px 31px;
+    cursor: pointer;
+    transition: background .2s, color .2s;
+}
+
+.btn-primary {
+    background: var(--red);
+    color: var(--white);
+    border: 2px solid var(--red);
+}
+.btn-primary:hover { background: #ff1a12; border-color: #ff1a12; }
+
+.btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+.btn-outline:hover { background: var(--white); color: var(--black); }
+
+/* topo da pagina */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 53px;
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -1px;
+}
+.logo span { color: var(--red); }
+
+.menu { display: flex; gap: 36px; }
+.menu a {
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    transition: color .2s;
+}
+.menu a:hover { color: var(--white); }
+
+.btn-top { padding: 14px 31px; border: 0; }
+
+/* hero */
+.hero {
+  min-height: 400px;
+  padding: 58px 3.7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      110deg,
+      var(--black) 0%,
+      var(--black) 62%,
+      var(--red) 62%,
+      var(--red) 64%,
+      rgba(11,11,15,.35) 64%
+    ),
+    url("img/Grande_Prêmio_São_Paulo_de_Fórmula_1_(52497080967).jpg") right center / cover no-repeat;
+}
+
+.hero-content {
+  max-width: 48%;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: var(--red);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 900;
+  font-style: italic;
+  line-height: .95;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--red);
+}
+
+.hero-description {
+  color: var(--muted);
+  font-size: .9rem;
+  max-width: 420px;
+  margin: 16px 0 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}.hero {
+  min-height: 400px;
+  padding: 58px 3.7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      110deg,
+      var(--black) 0%,
+      var(--black) 62%,
+      var(--red) 62%,
+      var(--red) 64%,
+      rgba(11,11,15,.35) 64%
+    ),
+    url("img/Grande_Prêmio_São_Paulo_de_Fórmula_1_(52497080967).jpg") right center / cover no-repeat;
+}
+
+.hero-content {
+  max-width: 48%;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: var(--red);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 900;
+  font-style: italic;
+  line-height: .95;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--red);
+}
+
+.hero-description {
+  color: var(--muted);
+  font-size: .9rem;
+  max-width: 420px;
+  margin: 16px 0 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* INFORMAÇÕES DA PISTA */
+
+.track-info {
+  display: flex;
+  z-index: 1;
+  align-self: flex-end;
+  margin: 0 2% 0 auto;
+}
+
+.info {
+  min-width: 85px;
+  text-align: center;
+  border-left: 1px solid rgba(255,255,255,.2);
+  padding: 0 14px;
+}
+
+.info strong {
+  display: block;
+  font-size: 2rem;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1;
+}
+
+.info small {
+  color: #aaa;
+  font-size: .6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ========== CARDS DOS PILOTOS ========== */
+.drivers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.team-ferrari  { --team: var(--ferrari); }
+.team-mclaren  { --team: var(--mclaren); }
+.team-mercedes { --team: var(--mercedes); }
+.team-audi     { --team: var(--audi); }
+
+.driver-card {
+    background: var(--panel);
+    border-top: 5px solid var(--team);
+    padding: 22px 24px 20px;
+    transition: transform .2s;
+}
+.driver-card:hover { transform: translateY(-6px); }
+
+.car-number {
+    display: block;
+    font-size: 5rem;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1.1;
+    color: var(--team);
+    opacity: .35;
+}
+
+.driver-card h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+.driver-card h3 strong { font-weight: 900; }
+.driver-card p { color: var(--muted); font-size: 1rem; }
+
+/* ========== FILTROS ========== */
+.filters {
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.filter-item { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.filter-item.search { flex: 1.65; }
+
+label {
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+input, select, textarea {
+    width: 100%;
+    font-family: var(--font);
+    font-size: 1.05rem;
+    color: var(--white);
+    background: var(--black);
+    border: 1px solid var(--line);
+    padding: 15px 16px;
+    outline: none;
+    transition: border-color .2s;
+}
+input::placeholder, textarea::placeholder { color: #6b6b76; }
+input:focus, select:focus, textarea:focus { border-color: var(--red); }
+
+.btn-filter { padding: 15px 31px; }
+
+/* ========== TABELA ========== */
+.table-wrap { overflow-x: auto; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--panel);
+    padding: 20px 20px;
+}
+
+td {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--line);
+    background: var(--panel);
+    font-size: 1.05rem;
+}
+
+.pos {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    font-size: .9rem;
+    font-weight: 900;
+    color: var(--black);
+    background: var(--white);
+}
+
+.bar {
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    margin-right: 12px;
+    vertical-align: middle;
+    background: var(--team);
+}
+
+.gap { color: var(--muted); font-size: .9rem; text-transform: uppercase; }
+.points { font-weight: 900; }
+
+tbody tr.leader td { background: rgba(225,6,0,.12); }
+.leader .pos { background: var(--red); color: var(--white); }
+tbody tr:hover td { background: #1e1e28; }
+tbody tr.leader:hover td { background: rgba(225,6,0,.2); }
+
+/* ========== INGRESSOS ========== */
+.tickets {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 53px;
+    align-items: start;
+    padding-bottom: 90px;
+}
+
+.tickets-info p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+}
+
+.alert {
+    background: rgba(255,204,0,.1);
+    border-left: 4px solid var(--yellow);
+    color: var(--yellow);
+    font-size: 1.1rem;
+    padding: 18px 24px;
+    margin-bottom: 6px;
+}
+
+.sectors li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 1.1rem;
+}
+.sectors strong { color: var(--red); font-weight: 700; }
+
+.ticket-form {
+    background: var(--panel);
+    border-top: 5px solid var(--red);
+    padding: 36px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-group.full { grid-column: 1 / -1; }
+.form-group small { color: var(--muted); font-size: .85rem; }
+
+input[type="file"] {
+    border-style: dashed;
+    color: var(--muted);
+    padding: 12px;
+}
+textarea { resize: vertical; min-height: 100px; }
+
+.btn-submit {
+    width: 100%;
+    text-align: center;
+    margin-top: 6px;
+}
+
+/* ========== RODAPÉ ========== */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .95rem;
+}
+.footer span { color: var(--red); }
+
+/* ========== CELULAR ou TABLET ========== */
+@media (max-width: 768px) {
+    .topbar { padding: 16px 20px; }
+    .menu { display: none; }
+    .logo { font-size: 1.4rem; }
+    .btn-top { padding: 12px 18px; font-size: .75rem; }
+
+    .hero {
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 0;
+        padding: 30px 20px 30px;
+        background:
+            linear-gradient(rgba(11,11,15,.82), rgba(11,11,15,.82)),
+            url("img/piloto.jpg") right center / cover no-repeat;
+    }
+    .hero-text { align-self: stretch; max-width: none; }
+    .eyebrow { font-size: .7rem; letter-spacing: 3px; }
+    .hero h1 { font-size: 3.2rem; }
+    .lead { font-size: 1rem; margin: 18px 0 22px; }
+    .hero-buttons { gap: 10px; }
+    .hero-buttons a {
+        flex: 1;
+        padding: 14px 12px;
+        font-size: .75rem;
+        text-align: left;
+    }
+    .track-info { align-self: stretch; margin: 28px 0 0; }
+    .info { flex: 1; padding: 0 10px; align-items: flex-start; }
+    .info strong { font-size: 2rem; }
+    .info span { font-size: .65rem; letter-spacing: 1px; }
+
+    section { padding-top: 50px; }
+    h2 { font-size: 1.7rem; }
+
+    .drivers { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .driver-card { padding: 16px 14px; }
+    .car-number { font-size: 3rem; }
+    .driver-card h3 { font-size: 1rem; }
+
+    .filters { flex-direction: column; align-items: stretch; }
+    .filter-item, .filter-item.search { flex: none; }
+
+    table { min-width: 620px; }
+    td, th { padding: 12px 14px; white-space: nowrap; }
+
+    .tickets { grid-template-columns: 1fr; gap: 30px; }
+    .ticket-form { padding: 22px 18px; }
+    .form-grid { grid-template-columns: 1fr; }
+    .form-group.full { grid-column: auto; }
+}
